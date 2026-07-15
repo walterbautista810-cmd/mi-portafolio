@@ -272,4 +272,102 @@ footer p {
     height: 580px; /* Altura ideal para lucir tus retratos verticales */
     padding-bottom: 40px;
     margin: 0 auto; /* Centra el carrusel en la pantalla */
+}/* ========================================== */
+/* ESTILOS PARA EL SLIDER DE TRABAJOS         */
+/* ========================================== */
+
+/* Contenedor del bloque del proyecto */
+.proyecto-bloque {
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.proyecto-info {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.proyecto-info h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.proyecto-info p {
+    font-size: 1rem;
+    color: #b3b3b3;
+}
+
+/* Ajustes del contenedor del Slider */
+.swiper {
+    width: 100%;
+    max-width: 600px; /* Limita el ancho máximo para que no se vea gigante */
+    height: 500px;    /* Altura ideal para retratos verticales */
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Estilos de cada slide */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Fondo negro por si la foto no cubre todo */
+}
+
+/* Ajuste perfecto de las fotos */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la foto llene el espacio sin deformarse */
+    display: block;
+}
+
+/* Color de las flechas de navegación de Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ffffff !important;
+    background: rgba(0, 0, 0, 0.5); /* Un fondo oscuro sutil para que se vean bien */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 18px !important; /* Flechas un poco más estilizadas y pequeñas */
+}
+
+/* Color de los puntitos de paginación de Swiper */
+.swiper-pagination-bullet {
+    background: #ffffff !important;
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ffffff !important;
+    opacity: 1;
+}/* ========================================== */
+/* AJUSTE FINAL PARA RESPALDAR FOTOS VERTICALES */
+/* ========================================== */
+
+/* Ajustamos las medidas para que el carrusel sea vertical */
+.swiper {
+    width: 100%;
+    max-width: 420px !important; /* Más estrecho para fotos verticales */
+    height: 560px !important;    /* Más alto para retratos */
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Mostramos la foto completa sin recortar nada de tu encuadre */
+.swiper-slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important; /* Muestra la foto entera sin cortes */
+    display: block;
 }
