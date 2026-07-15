@@ -1,0 +1,275 @@
+/* --- CONFIGURACIÓN GENERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f0f11; /* Un fondo gris oscuro muy elegante */
+    color: #f1f1f1;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Hace que el salto entre secciones sea suave */
+}
+
+/* --- ENCABEZADO --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #16161a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+header nav a {
+    color: #a0a0a5;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ffffff;
+}
+
+/* --- SECCIÓN HERO (BIENVENIDA) --- */
+.hero {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(15, 15, 17, 0.8), rgba(15, 15, 17, 0.95)), 
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #a0a0a5;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #ffffff;
+    color: #0f0f11;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+/* --- PORTAFOLIO (CUADRÍCULA/GRID) --- */
+.portfolio-section {
+    padding: 80px 5%;
+}
+
+.portfolio-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.grid-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crea las columnas */
+    gap: 20px;
+}
+
+.grid-item {
+    position: relative;
+    background-color: #16161a;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 500px; /* Le damos buena altura para tus fotos verticales */
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción de tus fotos de estudio */
+    transition: transform 0.5s;
+}
+    position: relative;
+    background-color: #16161a;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 250px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la foto sin deformarla */
+    transition: transform 0.5s;
+}
+
+.grid-item iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Efecto hover al pasar el cursor */
+.grid-item:hover img {
+    transform: scale(1.05);
+}
+
+.overlay, .overlay-video {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    padding: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* --- SOBRE MÍ --- */
+.about-section {
+    padding: 80px 5%;
+    background-color: #16161a;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #a0a0a5;
+    font-size: 1.1rem;
+}
+
+/* --- FOOTER / CONTACTO --- */
+footer {
+    padding: 80px 5% 40px 5%;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #a0a0a5;
+    margin-bottom: 30px;
+}
+
+.socials a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #a0a0a5;
+}
+
+.copy {
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #505055;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    header nav a {
+        margin: 0 10px;
+    }
+}/* --- ESTILOS PARA EL SLIDER (SWIPER) --- */
+.swiper {
+    width: 100%;
+    max-width: 1200px; /* Ancho elegante para la pantalla */
+    height: 550px; /* Altura ideal para tus retratos verticales */
+    padding-bottom: 50px; /* Espacio abajo para que no choquen los puntitos */
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #0f0f11;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la foto sin deformarla */
+}
+
+/* Personalizar las flechas para que combinen con tu fondo oscuro */
+.swiper-button-next, .swiper-button-prev {
+    color: #ffffff !important; /* Flechas blancas */
+    background: rgba(0, 0, 0, 0.5); /* Círculo oscuro semitransparente de fondo */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 1.5rem !important; /* Flechas de tamaño elegante */
+}
+
+/* Personalizar los puntitos de paginación */
+.swiper-pagination-bullet {
+    background: #a0a0a5 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ffffff !important; /* El punto activo será blanco brillante */
+}
+
+/* Ajuste del contenedor de video */
+.contenedor-video-fijo {
+    max-width: 800px;
+    height: 450px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+}/* --- ESTILOS PARA EL SLIDER (ESTILO INSTAGRAM) --- */
+.swiper {
+    width: 100%;
+    /* Limitamos el ancho para que la foto vertical mantenga una proporción perfecta */
+    max-width: 420px; 
+    height: 580px; /* Altura ideal para lucir tus retratos verticales */
+    padding-bottom: 40px;
+    margin: 0 auto; /* Centra el carrusel en la pantalla */
+}
