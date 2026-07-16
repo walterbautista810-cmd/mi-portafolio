@@ -1,310 +1,252 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio | Fotografía y Video</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .contenedor-video-shorts {
-            position: relative;
-            width: 100%;
-            max-width: 315px;
-            aspect-ratio: 1080/1920;
-            margin: 0 auto;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-            background-color: transparent;
-        }
-        .contenedor-video-shorts video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio | Fotografía y Video</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contenedor-video-shorts {
+            position: relative;
+            width: 100%;
+            max-width: 315px;
+            aspect-ratio: 1080/1920;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+            background-color: transparent;
+        }
+        .contenedor-video-shorts video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">Mi Portafolio</div>
-        <nav>
-            <a href="#seccion-fotografia">Fotografía</a>
-            <a href="#galeria-videos">Video & Reels</a>
-            <a href="#recap-eventos">Recap de Eventos</a>
-            <a href="#videos-clippers">Clippers</a>
-            <a href="#contacto" style="display: inline-block; background-color: #ffffff; color: #000000; padding: 12px 24px; text-decoration: none; font-weight: bold; border-radius: 8px; margin-top: 20px; transition: background 0.3s ease;">Contáctame</a>
-        </nav>
-    </header>
+    <header>
+        <div class="logo">Mi Portafolio</div>
+        <nav>
+            <a href="#galeria-comunion">Fotografía</a>
+            <a href="#galeria-videos">Video & Reels</a>
+            <a href="#recap-eventos">Recap de Eventos</a>
+            <a href="#videos-clippers">Clippers</a>
+           <a href="#contacto" style="display: inline-block; background-color: #ffffff; color: #000000; padding: 12px 24px; text-decoration: none; font-weight: bold; border-radius: 8px; margin-top: 20px; transition: background 0.3s ease;">Contáctame</a>
+        </nav>
+    </header>
 
-   <!-- SECCIÓN HERO (BIENVENIDA) -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Hola, soy Walter Ramirez Creador Visual</h1>
-            <p>Fotógrafo, sonidista y realizador audiovisual. Capturando historias a través del lente y el diseño de sonido.</p>
-        </div>
-    </section>
+   <!-- SECCIÓN HERO (BIENVENIDA) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hola, soy Walter Ramirez Creador Visual</h1>
+            <p>Fotógrafo, sonidista y realizador audiovisual. Capturando historias a través del lente y el diseño de sonido.</p>
+        </div>
+    </section>
 
-    <!-- SECCIÓN: FOTOGRAFÍA CON PESTAÑAS (TABS INTERACTIVOS) -->
-    <section id="seccion-fotografia" class="portfolio-section" style="padding-top: 60px;">
-        <h2>Fotografía Profesional</h2>
-        <p style="color: #888; text-align: center; margin-bottom: 30px;">Selecciona una categoría para ver la sesión completa:</p>
+    <!-- SECCIÓN: FOTOGRAFÍA -->
+    <section id="galeria-comunion" class="portfolio-section">
+        <h2>Fotografía Profesional</h2>
+        
+        <!-- Bloque 1: Comunión -->
+        <div class="proyecto-bloque">
+            <div class="proyecto-info">
+                <h3>Sesión: Primera Comunión</h3>
+                <p>Trabajo de fotografía de retrato y cobertura de evento eclesiástico.</p>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="comunion1.jpg.jpg" alt="Retrato Comunión"></div>
+                    <div class="swiper-slide"><img src="comunion2.jpg.jpg" alt="Retrato Comunión"></div>
+                    <div class="swiper-slide"><img src="comunion3.jpg.jpg" alt="Retrato Comunión"></div>
+                    <div class="swiper-slide"><img src="comunion4.jpg.jpg" alt="Retrato Comunión"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
 
-        <!-- Menú de pestañas (Botones de control) -->
-        <div class="contenedor-tabs">
-            <button class="tab-btn activo" onclick="abrirGaleria(event, 'tab-comunion')">Primera Comunión</button>
-            <button class="tab-btn" onclick="abrirGaleria(event, 'tab-retrato')">Retrato Editorial</button>
-            <button class="tab-btn" onclick="abrirGaleria(event, 'tab-promo')">Gala de Promoción</button>
-        </div>
+        <!-- Bloque 2: Retrato Editorial -->
+        <div class="proyecto-bloque" style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #222;">
+            <div class="proyecto-info">
+                <h3>Sesión: Retrato Editorial & Fine Art</h3>
+                <p>Fotografía de retrato artístico en interiores, aprovechando al máximo la luz natural y los tonos cálidos para crear una atmósfera clásica, íntima y atemporal.</p>
+            </div>
+            <div class="swiper mySwiperFotos2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="retrato1.jpg.jpg" alt="Retrato Editorial"></div>
+                    <div class="swiper-slide"><img src="retrato2.jpg.jpg" alt="Retrato Editorial"></div>
+                    <div class="swiper-slide"><img src="retrato3.jpg.jpg" alt="Retrato Editorial"></div>
+                    <div class="swiper-slide"><img src="retrato4.jpg.jpg" alt="Retrato Editorial"></div>
+                    <div class="swiper-slide"><img src="retrato5.jpg.jpg" alt="Retrato Editorial"></div>
+                    <div class="swiper-slide"><img src="retrato6.jpg.jpg" alt="Retrato Editorial"></div>
+                    <div class="swiper-slide"><img src="retrato7.jpg.jpg" alt="Retrato Editorial"></div>
+                </div>
+                <div class="swiper-button-next next-f2"></div>
+                <div class="swiper-button-prev prev-f2"></div>
+                <div class="swiper-pagination pag-f2"></div>
+            </div>
+        </div>
+    </section>
 
-        <!-- CONTENIDO DE LAS PESTAÑAS -->
-        
-        <!-- Pestaña 1: Comunión (Visible por defecto) -->
-        <div id="tab-comunion" class="contenido-tab activa">
-            <div class="proyecto-info">
-                <h3>Sesión: Primera Comunión</h3>
-                <p>Trabajo de fotografía de retrato y cobertura de evento eclesiástico.</p>
-            </div>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="comunion1.jpg.jpg" alt="Retrato Comunión"></div>
-                    <div class="swiper-slide"><img src="comunion2.jpg.jpg" alt="Retrato Comunión"></div>
-                    <div class="swiper-slide"><img src="comunion3.jpg.jpg" alt="Retrato Comunión"></div>
-                    <div class="swiper-slide"><img src="comunion4.jpg.jpg" alt="Retrato Comunión"></div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
+    <!-- SECCIÓN: VIDEOS DINÁMICOS -->
+    <section id="galeria-videos" class="portfolio-section" style="background-color: #0b0b0b; padding-top: 40px;">
+        <h2>Producción Audiovisual & Reels</h2>
+        <div class="proyecto-bloque">
+            <div class="proyecto-info">
+                <h3>Promoción para Redes Sociales</h3>
+                <p>Contenido vertical optimizado con edición dinámica.</p>
+            </div>
 
-        <!-- Pestaña 2: Retrato Editorial (Oculta al inicio) -->
-        <div id="tab-retrato" class="contenido-tab">
-            <div class="proyecto-info">
-                <h3>Sesión: Retrato Editorial & Fine Art</h3>
-                <p>Fotografía de retrato artístico en interiores, aprovechando al máximo la luz natural y los tonos cálidos.</p>
-            </div>
-            <div class="swiper mySwiperFotos2">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="retrato1.jpg.jpg" alt="Retrato Editorial"></div>
-                    <div class="swiper-slide"><img src="retrato2.jpg.jpg" alt="Retrato Editorial"></div>
-                    <div class="swiper-slide"><img src="retrato3.jpg.jpg" alt="Retrato Editorial"></div>
-                    <div class="swiper-slide"><img src="retrato4.jpg.jpg" alt="Retrato Editorial"></div>
-                    <div class="swiper-slide"><img src="retrato5.jpg.jpg" alt="Retrato Editorial"></div>
-                    <div class="swiper-slide"><img src="retrato6.jpg.jpg" alt="Retrato Editorial"></div>
-                    <div class="swiper-slide"><img src="retrato7.jpg.jpg" alt="Retrato Editorial"></div>
-                </div>
-                <div class="swiper-button-next next-f2"></div>
-                <div class="swiper-button-prev prev-f2"></div>
-                <div class="swiper-pagination pag-f2"></div>
-            </div>
-        </div>
+            <div class="swiper mySwiperVideos1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="contenedor-video-shorts">
+                            <video controls playsinline preload="metadata">
+                                <source src="reel1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="contenedor-video-shorts">
+                            <video controls playsinline preload="metadata">
+                                <source src="reel2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="contenedor-video-shorts">
+                            <video controls playsinline preload="metadata">
+                                <source src="reel3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next next-v1"></div>
+                <div class="swiper-button-prev prev-v1"></div>
+                <div class="swiper-pagination pag-v1"></div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Pestaña 3: Fiesta de Promoción (Oculta al inicio) -->
-        <div id="tab-promo" class="contenido-tab">
-            <div class="proyecto-info">
-                <h3>Sesión: Fiesta de Promoción</h3>
-                <p>Cobertura de gala de graduación, capturando la elegancia y la entrega de medallas.</p>
-            </div>
-            <div class="swiper mySwiperPromoVert">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="promo-retrato-gala-entero.jpg" alt="Retrato Gala"></div>
-                    <div class="swiper-slide"><img src="promo-retrato-graduadas.jpg" alt="Graduadas"></div>
-                    <div class="swiper-slide"><img src="promo-retrato-amigas.jpg" alt="Amigas Gala"></div>
-                    <div class="swiper-slide"><img src="promo-retrato-reconocimiento.jpg" alt="Entrega de Medalla"></div>
-                </div>
-                <div class="swiper-button-next next-pv"></div>
-                <div class="swiper-button-prev prev-pv"></div>
-                <div class="swiper-pagination pag-pv"></div>
-            </div>
-        </div>
+    <!-- SECCIÓN: RECAP DE EVENTOS -->
+    <section id="recap-eventos" class="portfolio-section" style="background-color: #111; padding-top: 40px; padding-bottom: 40px;">
+        <h2>Recap de Eventos</h2>
+        <div class="proyecto-bloque">
+            <div class="proyecto-info">
+                <h3>Cobertura y Dinamismo</h3>
+                <p>Resúmenes de eventos con transiciones rápidas y edición de alto impacto.</p>
+            </div>
 
-    </section>
+            <div class="swiper mySwiperVideos2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="contenedor-video-shorts">
+                            <video controls playsinline preload="metadata">
+                                <source src="reel4.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="contenedor-video-shorts">
+                            <video controls playsinline preload="metadata">
+                                <source src="reel5.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="contenedor-video-shorts">
+                            <video controls playsinline preload="metadata">
+                                <source src="reel6.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next next-v2"></div>
+                <div class="swiper-button-prev prev-v2"></div>
+                <div class="swiper-pagination pag-v2"></div>
+            </div>
+        </div>
+    </section>
 
-    <!-- SECCIÓN: VIDEOS DINÁMICOS -->
-    <section id="galeria-videos" class="portfolio-section" style="background-color: #0b0b0b; padding-top: 40px;">
-        <h2>Producción Audiovisual & Reels</h2>
-        <div class="proyecto-bloque">
-            <div class="proyecto-info">
-                <h3>Promoción para Redes Sociales</h3>
-                <p>Contenido vertical optimizado con edición dinámica.</p>
-            </div>
+    <!-- SECCIÓN: VIDEOS CLIPPERS -->
+    <section id="videos-clippers" class="portfolio-section" style="background-color: #0b0b0b; padding-top: 40px; padding-bottom: 40px;">
+        <h2>Videos Clippers</h2>
+        <div class="proyecto-bloque">
+            <div class="proyecto-info">
+                <h3>Microcontenido de Alto Engagement</h3>
+                <p>Estructuras dinámicas y subtitulado diseñado para retener audiencias.</p>
+            </div>
+            
+            <div class="contenedor-video-shorts">
+                <video controls playsinline preload="metadata">
+                    <source src="reel7.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
 
-            <div class="swiper mySwiperVideos1">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="contenedor-video-shorts">
-                            <video controls playsinline preload="metadata">
-                                <source src="reel1.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="contenedor-video-shorts">
-                            <video controls playsinline preload="metadata">
-                                <source src="reel2.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="contenedor-video-shorts">
-                            <video controls playsinline preload="metadata">
-                                <source src="reel3.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-button-next next-v1"></div>
-                <div class="swiper-button-prev prev-v1"></div>
-                <div class="swiper-pagination pag-v1"></div>
-            </div>
-        </div>
-    </section>
+    <!-- FOOTER -->
+    <footer id="contacto">
+        <h2>¿Tienes un proyecto en mente?</h2>
+        <p>Escríbeme para colaborar o cotizar servicios.</p>
+        <div class="socials">
+            <a href="https://www.instagram.com/realwalterramirez/" target="_blank">Instagram</a>
+            <a href="https://wa.me/584147391150" target="_blank">WhatsApp</a>
+        </div>
+        <p class="copy">&copy; 2026 Mi Portafolio.</p>
+    </footer>
 
-    <!-- SECCIÓN: RECAP DE EVENTOS -->
-    <section id="recap-eventos" class="portfolio-section" style="background-color: #111; padding-top: 40px; padding-bottom: 40px;">
-        <h2>Recap de Eventos</h2>
-        <div class="proyecto-bloque">
-            <div class="proyecto-info">
-                <h3>Cobertura y Dinamismo</h3>
-                <p>Resúmenes de eventos con transiciones rápidas y edición de alto impacto.</p>
-            </div>
+    <!-- SCRIPTS DE JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // 1.1. Swiper de fotos (Comunión)
+        new Swiper('.mySwiper', { 
+            loop: true, 
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, 
+            pagination: { el: '.swiper-pagination', clickable: true } 
+        });
 
-            <div class="swiper mySwiperVideos2">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="contenedor-video-shorts">
-                            <video controls playsinline preload="metadata">
-                                <source src="reel4.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="contenedor-video-shorts">
-                            <video controls playsinline preload="metadata">
-                                <source src="reel5.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="contenedor-video-shorts">
-                            <video controls playsinline preload="metadata">
-                                <source src="reel6.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-button-next next-v2"></div>
-                <div class="swiper-button-prev prev-v2"></div>
-                <div class="swiper-pagination pag-v2"></div>
-            </div>
-        </div>
-    </section>
+        // 1.2. Swiper de fotos (Retrato Editorial)
+        new Swiper('.mySwiperFotos2', { 
+            loop: true, 
+            navigation: { nextEl: '.next-f2', prevEl: '.prev-f2' }, 
+            pagination: { el: '.pag-f2', clickable: true } 
+        });
+        
+        // 2. Swiper de Reels (Videos 1) con auto-pausa
+        new Swiper('.mySwiperVideos1', { 
+            loop: false, 
+            navigation: { nextEl: '.next-v1', prevEl: '.prev-v1' }, 
+            pagination: { el: '.pag-v1', clickable: true },
+            on: {
+                slideChange: function () {
+                    document.querySelectorAll('.mySwiperVideos1 video').forEach(video => {
+                        video.pause();
+                        video.currentTime = 0;
+                    });
+                }
+            }
+        });
 
-    <!-- SECCIÓN: VIDEOS CLIPPERS -->
-    <section id="videos-clippers" class="portfolio-section" style="background-color: #0b0b0b; padding-top: 40px; padding-bottom: 40px;">
-        <h2>Videos Clippers</h2>
-        <div class="proyecto-bloque">
-            <div class="proyecto-info">
-                <h3>Microcontenido de Alto Engagement</h3>
-                <p>Estructuras dinámicas y subtitulado diseñado para retener audiencias.</p>
-            </div>
-            
-            <div class="contenedor-video-shorts">
-                <video controls playsinline preload="metadata">
-                    <source src="reel7.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer id="contacto">
-        <h2>¿Tienes un proyecto en mente?</h2>
-        <p>Escríbeme para colaborar o cotizar servicios.</p>
-        <div class="socials">
-            <a href="https://www.instagram.com/realwalterramirez/" target="_blank">Instagram</a>
-            <a href="https://wa.me/584147391150" target="_blank">WhatsApp</a>
-        </div>
-        <p class="copy">&copy; 2026 Mi Portafolio.</p>
-    </footer>
-
-    <!-- SCRIPTS DE JAVASCRIPT -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        // === FUNCIÓN PARA EL CONTROL DE LAS PESTAÑAS (TABS) ===
-        function abrirGaleria(evt, nombreTab) {
-            // 1. Ocultar todas las galerías de fotos
-            const contenidos = document.getElementsByClassName("contenido-tab");
-            for (let i = 0; i < contenidos.length; i++) {
-                contenidos[i].classList.remove("activa");
-            }
-
-            // 2. Quitarle el estilo de "activo" a todos los botones del menú
-            const botones = document.getElementsByClassName("tab-btn");
-            for (let i = 0; i < botones.length; i++) {
-                botones[i].classList.remove("activo");
-            }
-
-            // 3. Mostrar la galería que el usuario seleccionó y activar el botón
-            document.getElementById(nombreTab).classList.add("activa");
-            evt.currentTarget.classList.add("activo");
-        }
-
-        // === INICIALIZACIÓN DE LOS CARRUSELES (SWIPERS) ===
-
-        // 1. Swiper de fotos (Comunión)
-        new Swiper('.mySwiper', { 
-            loop: true, 
-            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, 
-            pagination: { el: '.swiper-pagination', clickable: true } 
-        });
-
-        // 2. Swiper de fotos (Retrato Editorial)
-        new Swiper('.mySwiperFotos2', { 
-            loop: true, 
-            navigation: { nextEl: '.next-f2', prevEl: '.prev-f2' }, 
-            pagination: { el: '.pag-f2', clickable: true } 
-        });
-
-        // 3. Swiper de fotos (Gala de Promoción)
-        new Swiper('.mySwiperPromoVert', { 
-            loop: true, 
-            navigation: { nextEl: '.next-pv', prevEl: '.prev-pv' }, 
-            pagination: { el: '.pag-pv', clickable: true } 
-        });
-        
-        // 4. Swiper de Reels (Videos 1) con auto-pausa
-        new Swiper('.mySwiperVideos1', { 
-            loop: false, 
-            navigation: { nextEl: '.next-v1', prevEl: '.prev-v1' }, 
-            pagination: { el: '.pag-v1', clickable: true },
-            on: {
-                slideChange: function () {
-                    document.querySelectorAll('.mySwiperVideos1 video').forEach(video => {
-                        video.pause();
-                        video.currentTime = 0;
-                    });
-                }
-            }
-        });
-
-        // 5. Swiper de Recap de Eventos (Videos 2) con auto-pausa
-        new Swiper('.mySwiperVideos2', { 
-            loop: false, 
-            navigation: { nextEl: '.next-v2', prevEl: '.prev-v2' }, 
-            pagination: { el: '.pag-v2', clickable: true },
-            on: {
-                slideChange: function () {
-                    document.querySelectorAll('.mySwiperVideos2 video').forEach(video => {
-                        video.pause();
-                        video.currentTime = 0;
-                    });
-                }
-            }
-        });
-    </script>
+        // 3. Swiper de Recap de Eventos (Videos 2) con auto-pausa
+        new Swiper('.mySwiperVideos2', { 
+            loop: false, 
+            navigation: { nextEl: '.next-v2', prevEl: '.prev-v2' }, 
+            pagination: { el: '.pag-v2', clickable: true },
+            on: {
+                slideChange: function () {
+                    document.querySelectorAll('.mySwiperVideos2 video').forEach(video => {
+                        video.pause();
+                        video.currentTime = 0;
+                    });
+                }
+            }
+        });
+    </script>
 </body>
 </html>
