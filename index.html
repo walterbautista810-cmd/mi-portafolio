@@ -36,7 +36,9 @@
             <a href="#sobre-mi">Sobre Mí</a>
             <a href="#contacto">Contacto</a>
         </nav>
-<section id="galeria-comunion" class="portfolio-section">
+    </header>
+
+    <section id="galeria-comunion" class="portfolio-section">
         <h2>Fotografía Profesional</h2>
         <div class="proyecto-bloque">
             <div class="proyecto-info">
@@ -50,7 +52,6 @@
                     <div class="swiper-slide"><img src="comunion3.jpg.jpg" alt="Retrato Comunión"></div>
                     <div class="swiper-slide"><img src="comunion4.jpg.jpg" alt="Retrato Comunión"></div>
                 </div>
-                <!-- Controles necesarios para que deslice -->
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
@@ -60,19 +61,22 @@
 
     <section id="galeria-videos" class="portfolio-section" style="background-color: #0b0b0b; padding-top: 40px;">
         <h2>Producción Audiovisual & Reels</h2>
-
         <div class="proyecto-bloque">
             <div class="proyecto-info">
                 <h3>Promoción para Redes Sociales</h3>
                 <p>Contenido vertical optimizado con edición dinámica.</p>
             </div>
 
-        <div class="contenedor-video-shorts">
-    <video controls playsinline preload="metadata">
-        <source src="reel2.mp4" type="video/mp4">
-        Tu navegador no soporta el video.
-    </video>
-</div>
+            <!-- Aquí agregué la clase mySwiperVideos1 para que funcionen las flechas -->
+            <div class="swiper mySwiperVideos1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="contenedor-video-shorts">
+                            <video controls playsinline preload="metadata">
+                                <source src="reel2.mp4" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-button-next next-v1"></div>
@@ -94,8 +98,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        new Swiper('.mySwiper', { loop: true, slidesPerView: 1, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, pagination: { el: '.swiper-pagination', clickable: true } });
-        new Swiper('.mySwiperVideos1', { loop: false, slidesPerView: 1, navigation: { nextEl: '.next-v1', prevEl: '.prev-v1' }, pagination: { el: '.pag-v1', clickable: true } });
+        new Swiper('.mySwiper', { loop: true, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, pagination: { el: '.swiper-pagination', clickable: true } });
+        new Swiper('.mySwiperVideos1', { loop: false, navigation: { nextEl: '.next-v1', prevEl: '.prev-v1' }, pagination: { el: '.pag-v1', clickable: true } });
     </script>
 </body>
+</html>
 </html>
