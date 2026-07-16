@@ -31,11 +31,11 @@
     <header>
         <div class="logo">Mi Portafolio</div>
         <nav>
-            <a href="#galeria-comunion">Fotografía</a>
+            <a href="#seccion-fotografia">Fotografía</a>
             <a href="#galeria-videos">Video & Reels</a>
             <a href="#recap-eventos">Recap de Eventos</a>
             <a href="#videos-clippers">Clippers</a>
-           <a href="#contacto" style="display: inline-block; background-color: #ffffff; color: #000000; padding: 12px 24px; text-decoration: none; font-weight: bold; border-radius: 8px; margin-top: 20px; transition: background 0.3s ease;">Contáctame</a>
+            <a href="#contacto" style="display: inline-block; background-color: #ffffff; color: #000000; padding: 12px 24px; text-decoration: none; font-weight: bold; border-radius: 8px; margin-top: 20px; transition: background 0.3s ease;">Contáctame</a>
         </nav>
     </header>
 
@@ -47,12 +47,22 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: FOTOGRAFÍA -->
-    <section id="galeria-comunion" class="portfolio-section">
+    <!-- SECCIÓN: FOTOGRAFÍA CON PESTAÑAS (TABS INTERACTIVOS) -->
+    <section id="seccion-fotografia" class="portfolio-section" style="padding-top: 60px;">
         <h2>Fotografía Profesional</h2>
+        <p style="color: #888; text-align: center; margin-bottom: 30px;">Selecciona una categoría para ver la sesión completa:</p>
+
+        <!-- Menú de pestañas (Botones de control) -->
+        <div class="contenedor-tabs">
+            <button class="tab-btn activo" onclick="abrirGaleria(event, 'tab-comunion')">Primera Comunión</button>
+            <button class="tab-btn" onclick="abrirGaleria(event, 'tab-retrato')">Retrato Editorial</button>
+            <button class="tab-btn" onclick="abrirGaleria(event, 'tab-promo')">Gala de Promoción</button>
+        </div>
+
+        <!-- CONTENIDO DE LAS PESTAÑAS -->
         
-        <!-- Bloque 1: Comunión -->
-        <div class="proyecto-bloque">
+        <!-- Pestaña 1: Comunión (Visible por defecto) -->
+        <div id="tab-comunion" class="contenido-tab activa">
             <div class="proyecto-info">
                 <h3>Sesión: Primera Comunión</h3>
                 <p>Trabajo de fotografía de retrato y cobertura de evento eclesiástico.</p>
@@ -70,11 +80,11 @@
             </div>
         </div>
 
-        <!-- Bloque 2: Retrato Editorial -->
-        <div class="proyecto-bloque" style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #222;">
+        <!-- Pestaña 2: Retrato Editorial (Oculta al inicio) -->
+        <div id="tab-retrato" class="contenido-tab">
             <div class="proyecto-info">
                 <h3>Sesión: Retrato Editorial & Fine Art</h3>
-                <p>Fotografía de retrato artístico en interiores, aprovechando al máximo la luz natural y los tonos cálidos para crear una atmósfera clásica, íntima y atemporal.</p>
+                <p>Fotografía de retrato artístico en interiores, aprovechando al máximo la luz natural y los tonos cálidos.</p>
             </div>
             <div class="swiper mySwiperFotos2">
                 <div class="swiper-wrapper">
@@ -91,6 +101,26 @@
                 <div class="swiper-pagination pag-f2"></div>
             </div>
         </div>
+
+        <!-- Pestaña 3: Fiesta de Promoción (Oculta al inicio) -->
+        <div id="tab-promo" class="contenido-tab">
+            <div class="proyecto-info">
+                <h3>Sesión: Fiesta de Promoción</h3>
+                <p>Cobertura de gala de graduación, capturando la elegancia y la entrega de medallas.</p>
+            </div>
+            <div class="swiper mySwiperPromoVert">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="promo-retrato-gala-entero.jpg" alt="Retrato Gala"></div>
+                    <div class="swiper-slide"><img src="promo-retrato-graduadas.jpg" alt="Graduadas"></div>
+                    <div class="swiper-slide"><img src="promo-retrato-amigas.jpg" alt="Amigas Gala"></div>
+                    <div class="swiper-slide"><img src="promo-retrato-reconocimiento.jpg" alt="Entrega de Medalla"></div>
+                </div>
+                <div class="swiper-button-next next-pv"></div>
+                <div class="swiper-button-prev prev-pv"></div>
+                <div class="swiper-pagination pag-pv"></div>
+            </div>
+        </div>
+
     </section>
 
     <!-- SECCIÓN: VIDEOS DINÁMICOS -->
@@ -204,21 +234,49 @@
     <!-- SCRIPTS DE JAVASCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // 1.1. Swiper de fotos (Comunión)
+        // === FUNCIÓN PARA EL CONTROL DE LAS PESTAÑAS (TABS) ===
+        function abrirGaleria(evt, nombreTab) {
+            // 1. Ocultar todas las galerías de fotos
+            const contenidos = document.getElementsByClassName("contenido-tab");
+            for (let i = 0; i < contenidos.length; i++) {
+                contenidos[i].classList.remove("activa");
+            }
+
+            // 2. Quitarle el estilo de "activo" a todos los botones del menú
+            const botones = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < botones.length; i++) {
+                botones[i].classList.remove("activo");
+            }
+
+            // 3. Mostrar la galería que el usuario seleccionó y activar el botón
+            document.getElementById(nombreTab).classList.add("activa");
+            evt.currentTarget.classList.add("activo");
+        }
+
+        // === INICIALIZACIÓN DE LOS CARRUSELES (SWIPERS) ===
+
+        // 1. Swiper de fotos (Comunión)
         new Swiper('.mySwiper', { 
             loop: true, 
             navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, 
             pagination: { el: '.swiper-pagination', clickable: true } 
         });
 
-        // 1.2. Swiper de fotos (Retrato Editorial)
+        // 2. Swiper de fotos (Retrato Editorial)
         new Swiper('.mySwiperFotos2', { 
             loop: true, 
             navigation: { nextEl: '.next-f2', prevEl: '.prev-f2' }, 
             pagination: { el: '.pag-f2', clickable: true } 
         });
+
+        // 3. Swiper de fotos (Gala de Promoción)
+        new Swiper('.mySwiperPromoVert', { 
+            loop: true, 
+            navigation: { nextEl: '.next-pv', prevEl: '.prev-pv' }, 
+            pagination: { el: '.pag-pv', clickable: true } 
+        });
         
-        // 2. Swiper de Reels (Videos 1) con auto-pausa
+        // 4. Swiper de Reels (Videos 1) con auto-pausa
         new Swiper('.mySwiperVideos1', { 
             loop: false, 
             navigation: { nextEl: '.next-v1', prevEl: '.prev-v1' }, 
@@ -233,7 +291,7 @@
             }
         });
 
-        // 3. Swiper de Recap de Eventos (Videos 2) con auto-pausa
+        // 5. Swiper de Recap de Eventos (Videos 2) con auto-pausa
         new Swiper('.mySwiperVideos2', { 
             loop: false, 
             navigation: { nextEl: '.next-v2', prevEl: '.prev-v2' }, 
