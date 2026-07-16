@@ -370,4 +370,9 @@ footer p {
     height: 100% !important;
     object-fit: contain !important; /* Muestra la foto entera sin cortes */
     display: block;
+}.swiper-slide img {
+    width: 100%;
+    height: 400px; /* O el tamaño que prefieras para que sea uniforme */
+    object-fit: cover; /* Esto evita que la foto se deforme */
+    border-radius: 12px;
 }
