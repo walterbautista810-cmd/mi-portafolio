@@ -11,12 +11,12 @@
             position: relative;
             width: 100%;
             max-width: 315px;
-            aspect-ratio: 9/16;
+            aspect-ratio: 1080/1920;
             margin: 0 auto;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-            background-color: #000;
+            background-color: transparent;
         }
         .contenedor-video-shorts video {
             width: 100%;
@@ -67,14 +67,27 @@
                 <p>Contenido vertical optimizado con edición dinámica.</p>
             </div>
 
-            <!-- Aquí agregué la clase mySwiperVideos1 para que funcionen las flechas -->
+            <!-- Carrusel de 3 videos -->
             <div class="swiper mySwiperVideos1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="contenedor-video-shorts">
                             <video controls playsinline preload="metadata">
+                                <source src="reel1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="contenedor-video-shorts">
+                            <video controls playsinline preload="metadata">
                                 <source src="reel2.mp4" type="video/mp4">
-                                Tu navegador no soporta el video.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="contenedor-video-shorts">
+                            <video controls playsinline preload="metadata">
+                                <source src="reel3.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
