@@ -4,35 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio | Fotografía y Video</title>
-    <!-- CSS de Swiper (Librería para el Slider) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Nuestro archivo de estilos CSS -->
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Estilos rápidos para que los videos se adapten perfectamente sin dañar tu CSS */
         .contenedor-video-shorts {
             position: relative;
             width: 100%;
-            max-width: 315px; /* Ancho ideal para shorts verticales */
+            max-width: 315px;
             aspect-ratio: 9/16;
             margin: 0 auto;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+            background-color: #000;
         }
-        .contenedor-video-shorts iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .contenedor-video-shorts video {
             width: 100%;
             height: 100%;
-            border: none;
+            object-fit: cover;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <!-- Encabezado / Barra de Navegación -->
     <header>
         <div class="logo">Mi Portafolio</div>
         <nav>
@@ -43,7 +38,6 @@
         </nav>
     </header>
 
-    <!-- Presentación de Bienvenida -->
     <section class="hero">
         <div class="hero-content">
             <h1>Walter Ramirez Creador Visual</h1>
@@ -52,81 +46,45 @@
         </div>
     </section>
 
-    <!-- Sección de Fotografía -->
     <section id="galeria-comunion" class="portfolio-section">
         <h2>Fotografía Profesional</h2>
-
-        <!-- ========================================== -->
-        <!-- PROYECTO 1: PORTAFOLIO DE FOTOGRAFÍA       -->
-        <!-- ========================================== -->
         <div class="proyecto-bloque">
             <div class="proyecto-info">
                 <h3>Sesión: Primera Comunión</h3>
                 <p>Trabajo de fotografía de retrato y cobertura de evento eclesiástico.</p>
             </div>
-
-            <!-- Contenedor del Slider (Swiper) -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <!-- Foto 1 -->
-                    <div class="swiper-slide">
-                        <img src="comunion1.jpg.jpg" alt="Retrato Comunión">
-                    </div>
-                    <!-- Foto 2 -->
-                    <div class="swiper-slide">
-                        <img src="comunion2.jpg.jpg" alt="Retrato Comunión">
-                    </div>
-                    <!-- Foto 3 -->
-                    <div class="swiper-slide">
-                        <img src="comunion3.jpg.jpg" alt="Retrato Comunión">
-                    </div>
-                    <!-- Foto 4 -->
-                    <div class="swiper-slide">
-                        <img src="comunion4.jpg.jpg" alt="Retrato Comunión">
-                    </div>
+                    <div class="swiper-slide"><img src="comunion1.jpg" alt="Retrato Comunión"></div>
+                    <div class="swiper-slide"><img src="comunion2.jpg" alt="Retrato Comunión"></div>
+                    <div class="swiper-slide"><img src="comunion3.jpg" alt="Retrato Comunión"></div>
+                    <div class="swiper-slide"><img src="comunion4.jpg" alt="Retrato Comunión"></div>
                 </div>
-
-                <!-- Botones de navegación (Flechas) -->
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-
-                <!-- Paginación -->
                 <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Producción Audiovisual -->
     <section id="galeria-videos" class="portfolio-section" style="background-color: #0b0b0b; padding-top: 40px;">
         <h2>Producción Audiovisual & Reels</h2>
 
-        <!-- ========================================== -->
-        <!-- PROYECTO 2: REELS / REDES SOCIALES         -->
-        <!-- ========================================== -->
         <div class="proyecto-bloque">
             <div class="proyecto-info">
                 <h3>Promoción para Redes Sociales</h3>
-                <p>Creación de contenido vertical optimizado de alto impacto y edición dinámica.</p>
+                <p>Contenido vertical optimizado con edición dinámica.</p>
             </div>
 
             <div class="swiper mySwiperVideos1">
                 <div class="swiper-wrapper">
-                    <!-- Video 1 -->
+                    <!-- VIDEO INTEGRADO -->
                     <div class="swiper-slide">
                         <div class="contenedor-video-shorts">
-                            <iframe src="https://www.youtube.com/embed/Gi7LpC0U_JU" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <!-- Video 2 -->
-                    <div class="swiper-slide">
-                        <div class="contenedor-video-shorts">
-                            <iframe src="https://www.youtube.com/embed/5D0e-5W8-qA" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <!-- Video 3 -->
-                    <div class="swiper-slide">
-                        <div class="contenedor-video-shorts">
-                            <iframe src="https://www.youtube.com/embed/e9lGDWL-Tgk" allowfullscreen></iframe>
+                            <video controls playsinline preload="metadata">
+                                <source src="video/reel2.mp4" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
                         </div>
                     </div>
                 </div>
@@ -135,149 +93,22 @@
                 <div class="swiper-pagination pag-v1"></div>
             </div>
         </div>
-
-        <!-- ========================================== -->
-        <!-- PROYECTO 3: RECAPS DE EVENTOS             -->
-        <!-- ========================================== -->
-        <div class="proyecto-bloque" style="margin-top: 50px;">
-            <div class="proyecto-info">
-                <h3>Recaps de Eventos</h3>
-                <p>Resúmenes visuales con montaje de ritmo acelerado y diseño de sonido inmersivo.</p>
-            </div>
-
-            <div class="swiper mySwiperVideos2">
-                <div class="swiper-wrapper">
-                    <!-- Video 1 -->
-                    <div class="swiper-slide">
-                        <div class="contenedor-video-shorts">
-                            <iframe src="https://www.youtube.com/embed/wTXk934AEw0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <!-- Video 2 -->
-                    <div class="swiper-slide">
-                        <div class="contenedor-video-shorts">
-                            <iframe src="https://www.youtube.com/embed/GodFxBMFZsI" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <!-- Video 3 -->
-                    <div class="swiper-slide">
-                        <div class="contenedor-video-shorts">
-                            <iframe src="https://www.youtube.com/embed/C3lydR4q8os" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-button-next next-v2"></div>
-                <div class="swiper-button-prev prev-v2"></div>
-                <div class="swiper-pagination pag-v2"></div>
-            </div>
-        </div>
-
-        <!-- ========================================== -->
-        <!-- PROYECTO 4: VIDEO CLIPS                   -->
-        <!-- ========================================== -->
-        <div class="proyecto-bloque" style="margin-top: 50px;">
-            <div class="proyecto-info">
-                <h3>Video Clips & Portafolio Corto</h3>
-                <p>Edición rítmica de clips musicales y fragmentos de alto rendimiento audiovisual.</p>
-            </div>
-
-            <div class="swiper mySwiperVideos3">
-                <div class="swiper-wrapper">
-                    <!-- Video 1 -->
-                    <div class="swiper-slide">
-                        <div class="contenedor-video-shorts">
-                            <iframe src="https://www.youtube.com/embed/AmPOXX6fbQs" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-button-next next-v3"></div>
-                <div class="swiper-button-prev prev-v3"></div>
-                <div class="swiper-pagination pag-v3"></div>
-            </div>
-        </div>
     </section>
 
-    <!-- Pie de página y Contacto -->
     <footer id="contacto">
         <h2>¿Tienes un proyecto en mente?</h2>
-        <p>Escríbeme para colaborar o cotizar servicios de fotografía, video y sonido.</p>
+        <p>Escríbeme para colaborar o cotizar servicios.</p>
         <div class="socials">
             <a href="https://www.instagram.com/realwalterramirez/" target="_blank">Instagram</a>
-            <a href="#" target="_blank">Vimeo</a>
             <a href="https://wa.me/584147391150" target="_blank">WhatsApp</a>
         </div>
-        <p class="copy">&copy; 2026 Mi Portafolio. Todos los derechos reservados.</p>
+        <p class="copy">&copy; 2026 Mi Portafolio.</p>
     </footer>
 
-    <!-- JavaScript de Swiper (Librería para los sliders) -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Inicialización de los Sliders Independientes -->
     <script>
-        // Slider 1: Primera Comunión
-        const swiperComunion = new Swiper('.mySwiper', {
-            loop: true,
-            slidesPerView: 1,
-            spaceBetween: 10,
-            centeredSlides: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-
-        // Slider 2: Promoción Redes
-        const swiperV1 = new Swiper('.mySwiperVideos1', {
-            loop: true,
-            slidesPerView: 1,
-            spaceBetween: 10,
-            centeredSlides: true,
-            navigation: {
-                nextEl: '.next-v1',
-                prevEl: '.prev-v1',
-            },
-            pagination: {
-                el: '.pag-v1',
-                clickable: true,
-            },
-        });
-
-        // Slider 3: Recaps
-        const swiperV2 = new Swiper('.mySwiperVideos2', {
-            loop: true,
-            slidesPerView: 1,
-            spaceBetween: 10,
-            centeredSlides: true,
-            navigation: {
-                nextEl: '.next-v2',
-                prevEl: '.prev-v2',
-            },
-            pagination: {
-                el: '.pag-v2',
-                clickable: true,
-            },
-        });
-
-        // Slider 4: Video Clips
-        const swiperV3 = new Swiper('.mySwiperVideos3', {
-            loop: false, // Apagado porque solo hay 1 video
-            slidesPerView: 1,
-            spaceBetween: 10,
-            centeredSlides: true,
-            navigation: {
-                nextEl: '.next-v3',
-                prevEl: '.prev-v3',
-            },
-            pagination: {
-                el: '.pag-v3',
-                clickable: true,
-            },
-        });
+        new Swiper('.mySwiper', { loop: true, slidesPerView: 1, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, pagination: { el: '.swiper-pagination', clickable: true } });
+        new Swiper('.mySwiperVideos1', { loop: false, slidesPerView: 1, navigation: { nextEl: '.next-v1', prevEl: '.prev-v1' }, pagination: { el: '.pag-v1', clickable: true } });
     </script>
 </body>
-</html>
 </html>
