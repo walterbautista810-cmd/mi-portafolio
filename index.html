@@ -67,27 +67,27 @@
                 <p>Contenido vertical optimizado con edición dinámica.</p>
             </div>
 
-            <!-- Carrusel de 3 videos -->
+            <!-- Carrusel de videos -->
             <div class="swiper mySwiperVideos1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="contenedor-video-shorts">
                             <video controls playsinline preload="metadata">
-                                <source src="reel1.mp4" type="video/mp4">
+                                <source src="video/reel1.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="contenedor-video-shorts">
                             <video controls playsinline preload="metadata">
-                                <source src="reel2.mp4" type="video/mp4">
+                                <source src="video/reel2.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="contenedor-video-shorts">
                             <video controls playsinline preload="metadata">
-                                <source src="reel3.mp4" type="video/mp4">
+                                <source src="video/reel3.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -111,9 +111,24 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+        // Inicializar Swiper de fotos
         new Swiper('.mySwiper', { loop: true, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, pagination: { el: '.swiper-pagination', clickable: true } });
-        new Swiper('.mySwiperVideos1', { loop: false, navigation: { nextEl: '.next-v1', prevEl: '.prev-v1' }, pagination: { el: '.pag-v1', clickable: true } });
+        
+        // Inicializar Swiper de videos con auto-pausa
+        const swiperVideos = new Swiper('.mySwiperVideos1', { 
+            loop: false, 
+            navigation: { nextEl: '.next-v1', prevEl: '.prev-v1' }, 
+            pagination: { el: '.pag-v1', clickable: true },
+            on: {
+                slideChange: function () {
+                    // Pausa y reinicia todos los videos al cambiar de slide
+                    document.querySelectorAll('.mySwiperVideos1 video').forEach(video => {
+                        video.pause();
+                        video.currentTime = 0;
+                    });
+                }
+            }
+        });
     </script>
 </body>
-</html>
 </html>
