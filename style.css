@@ -454,4 +454,23 @@ footer p {
     /* ESTA ES LA CLAVE: 'cover' recorta un poquito los lados para llenar todo */
     object-fit: cover; 
     display: block;
+}.contenedor-video-shorts {
+    position: relative;
+    width: 100%;
+    max-width: 315px; /* Mantenemos este ancho máximo */
+    /* Usamos la proporción exacta de tu video: 1080 / 1920 = 0.5625 (o 9/16) */
+    aspect-ratio: 1080 / 1920; 
+    margin: 0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    background-color: transparent; /* Eliminamos el fondo negro */
+}
+
+.contenedor-video-shorts video {
+    width: 100%;
+    height: 100%;
+    /* 'cover' asegura que el video llene el área sin dejar espacios */
+    object-fit: cover; 
+    display: block;
 }
