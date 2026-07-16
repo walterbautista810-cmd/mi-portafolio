@@ -474,3 +474,25 @@ footer p {
     object-fit: cover; 
     display: block;
 }
+/* Ajustes para el nuevo carrusel de videos */
+.mySwiperVideos1 {
+    width: 100%;
+    max-width: 350px; /* Un poco más grande que el video para dar espacio a las flechas */
+    margin: 0 auto;
+    padding-bottom: 40px; /* Espacio para la paginación */
+}
+
+/* Estilos de las flechas para que se vean bien sobre el fondo oscuro */
+.next-v1, .prev-v1 {
+    color: #ffffff !important;
+}
+
+/* Ajuste del contenedor de video dentro del slider */
+.contenedor-video-shorts {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1080 / 1920;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: transparent;
+}
