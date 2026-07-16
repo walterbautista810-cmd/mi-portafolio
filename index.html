@@ -43,7 +43,7 @@
     <section id="galeria-comunion" class="portfolio-section">
         <h2>Fotografía Profesional</h2>
         
-        <!-- Bloque 1: Comunión (Con una sola extensión .jpg) -->
+        <!-- Bloque 1: Comunión -->
         <div class="proyecto-bloque">
             <div class="proyecto-info">
                 <h3>Sesión: Primera Comunión</h3>
@@ -62,7 +62,7 @@
             </div>
         </div>
 
-        <!-- Bloque 2: Retrato Editorial (Tus nuevas fotos) -->
+        <!-- Bloque 2: Retrato Editorial (Con los nombres nuevos simplificados) -->
         <div class="proyecto-bloque" style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #222;">
             <div class="proyecto-info">
                 <h3>Sesión: Retrato Editorial & Fine Art</h3>
@@ -70,15 +70,15 @@
             </div>
             <div class="swiper mySwiperFotos2">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="_DSC0052.jpg" alt="Retrato Editorial"></div>
-                    <div class="swiper-slide"><img src="_DSC0053.jpg" alt="Retrato Editorial"></div>
-                    <div class="swiper-slide"><img src="_DSC0054.jpg" alt="Retrato Editorial"></div>
-                    <div class="swiper-slide"><img src="_DSC0055.jpg" alt="Retrato Editorial"></div>
-                    <div class="swiper-slide"><img src="_DSC0058.jpg" alt="Retrato Editorial"></div>
-                    <div class="swiper-slide"><img src="_DSC0059.jpg" alt="Retrato Editorial"></div>
-                    <div class="swiper-slide"><img src="_DSC0076.jpg" alt="Retrato Editorial"></div>
+                    <div class="swiper-slide"><img src="retrato1.jpg" alt="Retrato Editorial"></div>
+                    <div class="swiper-slide"><img src="retrato2.jpg" alt="Retrato Editorial"></div>
+                    <div class="swiper-slide"><img src="retrato3.jpg" alt="Retrato Editorial"></div>
+                    <div class="swiper-slide"><img src="retrato4.jpg" alt="Retrato Editorial"></div>
+                    <div class="swiper-slide"><img src="retrato5.jpg" alt="Retrato Editorial"></div>
+                    <div class="swiper-slide"><img src="retrato6.jpg" alt="Retrato Editorial"></div>
+                    <div class="swiper-slide"><img src="retrato7.jpg" alt="Retrato Editorial"></div>
                 </div>
-                <!-- Flechas y paginador exclusivos para esta sección -->
+                <!-- Controles del Swiper para Retratos -->
                 <div class="swiper-button-next next-f2"></div>
                 <div class="swiper-button-prev prev-f2"></div>
                 <div class="swiper-pagination pag-f2"></div>
@@ -166,7 +166,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: VIDEOS CLIPPERS (UN SOLO VIDEO) -->
+    <!-- SECCIÓN: VIDEOS CLIPPERS -->
     <section id="videos-clippers" class="portfolio-section" style="background-color: #0b0b0b; padding-top: 40px; padding-bottom: 40px;">
         <h2>Videos Clippers</h2>
         <div class="proyecto-bloque">
@@ -197,21 +197,21 @@
     <!-- SCRIPTS DE JAVASCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // 1.1. Inicializar Swiper de fotos (Comunión)
+        // 1.1. Swiper de fotos (Comunión)
         new Swiper('.mySwiper', { 
             loop: true, 
             navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, 
             pagination: { el: '.swiper-pagination', clickable: true } 
         });
 
-        // 1.2. Inicializar Swiper de fotos (Retrato Editorial)
+        // 1.2. Swiper de fotos (Retrato Editorial)
         new Swiper('.mySwiperFotos2', { 
             loop: true, 
             navigation: { nextEl: '.next-f2', prevEl: '.prev-f2' }, 
             pagination: { el: '.pag-f2', clickable: true } 
         });
         
-        // 2. Inicializar Swiper de Reels (Videos 1) con auto-pausa
+        // 2. Swiper de Reels (Videos 1) con auto-pausa
         new Swiper('.mySwiperVideos1', { 
             loop: false, 
             navigation: { nextEl: '.next-v1', prevEl: '.prev-v1' }, 
@@ -226,7 +226,7 @@
             }
         });
 
-        // 3. Inicializar Swiper de Recap de Eventos (Videos 2) con auto-pausa
+        // 3. Swiper de Recap de Eventos (Videos 2) con auto-pausa
         new Swiper('.mySwiperVideos2', { 
             loop: false, 
             navigation: { nextEl: '.next-v2', prevEl: '.prev-v2' }, 
